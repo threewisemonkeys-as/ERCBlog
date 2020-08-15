@@ -7,27 +7,34 @@
 var toggle = document.getElementById("dark-mode-toggle");
 var darkTheme = document.getElementById("dark-mode-theme");
 
-toggle.addEventListener("click", () => {
-    console.log("the button was pressed")
-    if (toggle.className === "fal fa-moon-o") {
-        setTheme("dark");
-    } else if (toggle.className === "fal fa-sun-o") {
-        setTheme("light");
-    }
-});
-
-function setTheme(mode) {
+function maketheTheme(mode) {
+    console.log('Function called');
     if (mode === "dark") {
         darkTheme.disabled = false;
         toggle.className = "fal fa-sun-o";
+        console.log(toggle.className);
     } else if (mode === "light") {
         darkTheme.disabled = true;
         toggle.className = "fal fa-moon-o";
+        console.log(toggle.className);
     }
 }
+
+toggle.addEventListener("click", () => {
+    console.log("the button was pressed");
+    if (toggle.className === "fal fa-moon-o") {
+        console.log("changing theme");
+        maketheTheme("dark");
+        console.log("theme changed");
+    } else if (toggle.className === "fal fa-sun-o") {
+        maketheTheme("light");
+    }
+});
+
+
 // the default theme is light
 var savedTheme = localStorage.getItem("dark-mode-storage") || "light";
-setTheme(savedTheme);
+maketheTheme(savedTheme);
 
 function setTheme(mode) {
     localStorage.setItem("dark-mode-storage", mode);
