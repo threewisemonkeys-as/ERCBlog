@@ -57,3 +57,8 @@
     border-radius: 50%;
   }
   
+  .nav-title{
+    text-transform: lowercase !important;
+    font-size: 200%;
+    letter-spacing: 3px;
+  }
