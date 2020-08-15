@@ -55,7 +55,7 @@ disableLanguages        = []
     alwaysOnHomepage      = false
 
     [params.intro.pic]
-      src                 = "img/main/logo.jpg"
+      src                 = "img/main/ARM.png"
       shape               = "circle"
       width               = ""
       alt                 = "Hugo Future Imperfect Slim"
