@@ -59,9 +59,12 @@
   
   .nav-title{
     text-transform: lowercase !important;
-    font-size: 200%;
+    font-size: 250%;
     letter-spacing: 3px;
   }
+
   .cursorgif{
-    display:flex;
+    width:15px !important;
+    height:20px !important;
+    filter:invert(50%) !important;
   }

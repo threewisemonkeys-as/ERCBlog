@@ -6,21 +6,23 @@
 */
 var toggle = document.getElementById("dark-mode-toggle");
 var darkTheme = document.getElementById("dark-mode-theme");
+var changetext = document.getElementById("togglethis")
 
 function maketheTheme(mode) {
     if (mode === "dark") {
         darkTheme.disabled = false;
-        toggle.className = "fal fa-sun-o";
+        changetext.innerHTML="Light"
     } else if (mode === "light") {
         darkTheme.disabled = true;
-        toggle.className = "fal fa-moon-o";
+        changetext.innerHTML="Dark"
+
     }
 }
 
 toggle.addEventListener("click", () => {
-    if (toggle.className === "fal fa-moon-o") {
+    if (toggle.checked) {
         maketheTheme("dark");
-    } else if (toggle.className === "fal fa-sun-o") {
+    } else {
         maketheTheme("light");
     }
 });
